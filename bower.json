@@ -1,0 +1,19 @@
+{
+    "name": "credit-calculator",
+    "homepage": "https://github.com/qakovalyov/credit_calculator",
+    "authors": [
+        "rudolf <qa.kovalyov@gmail.com>"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "autoNumeric": "",
+        "jquery": "",
+        "spin.js": ""
+    }
+}

@@ -1,0 +1,2 @@
+$font-path: 'fonts';
+@include font-face('FontAwesome', font-files('#{$font-path}/fontawesome-webfont.woff','#{$font-path}/fontawesome-webfont.ttf','#{$font-path}/fontawesome-webfont.svg'), '#{$font-path}/fontawesome-webfont.eot','normal','normal');
