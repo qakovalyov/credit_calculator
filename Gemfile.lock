@@ -17,5 +17,8 @@ PLATFORMS
 
 DEPENDENCIES
   json
+  rack
+  rack-protection
   sinatra
   sinatra-param
+  tilt
