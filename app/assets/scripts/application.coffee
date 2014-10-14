@@ -15,14 +15,13 @@ calculating = (event) ->
       type: 'POST'
       dataType: 'json'
       data: $(event.target).serializeArray()
-      url: '/calculating'
+      url: '/calc'
       error: (data) ->
         response = JSON.parse data.responseText
         validateFormAfterSend response, $form
       success: (data) ->
-        console.log 'OK', data
+        createTable data, $form
 
-#      alert data.errors if data.errors
 
 
 validateFormBeforeSend = ($form) ->
@@ -47,4 +46,21 @@ validateFormAfterSend =  (response, $form) ->
 
 isValidateForm = () ->
   !$('form').find('.form-group').hasClass('has-error')
+
+createTable = (data, $form) ->
+  console.log data
+  html = ''
+  $.each data, (index, val) ->
+    month = index + 1
+    html +="<tr>
+              <td>#{month}</td>
+              <td>#{val[0]}</td>
+              <td>#{val[1]}</td>
+              <td>#{val[2]}</td>
+              <td>#{val[3]}</td>
+            </tr>"
+  $('.credit-table')
+    .toggleClass 'hidden'
+    .find('table tbody').html html
+  $form.toggleClass 'hidden'
 

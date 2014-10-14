@@ -1,22 +1,27 @@
-html, body, main, { height: 100% }
+html, body { height:100% }
 body {
   background: #fff url(/images/legend.gif) no-repeat fixed;
   @include background-size(cover);
 }
 
-main { padding-bottom: 30px; }
-footer {
-  height: 30px;
-  margin-top: -30px;
+main {
+  min-height: 100%;
+  height: auto;
+  margin-bottom: -30px;
+  padding-bottom: 30px;
 }
 
-section {
-  &, &>div, &>div>div { height: 100% }
+footer { height: 30px; padding-top: 10px }
+.wrapper { min-height: 350px; padding-top: 20px; }
+.back {
+  position: absolute;
+  top: 15px;left: 15px;
+  font-size: 16px;
 }
 
 .v-center {
   display:table;
-  height: 100%;
+  width: 100%;
   &>div {
     display: table-cell;
     vertical-align:middle;

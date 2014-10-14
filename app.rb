@@ -2,19 +2,18 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/param'
 require 'json'
+require 'pry-byebug'
 
-set :public_folder, 'dist'
-
-
-get '/' do
-  File.read(File.join('app/views/', 'index.html'))
+configure do
+  set :public_folder, 'dist'
 end
 
-post '/calculating' do
-  content_type :json
-  param :total_amount,  Integer, required: true
-  param :term,          Integer, required: true
-  param :interest_rate, Integer, required: true
-
-  params.to_json
+not_found do
+  'Your page cannot be found'
 end
+
+
+Dir["./app/models/*.rb"].each { |file| require file }
+Dir["./app/helpers/*.rb"].each { |file| require file }
+Dir["./app/controllers/*.rb"].each { |file| require file }
+
