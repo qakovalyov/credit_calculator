@@ -60,7 +60,10 @@ createTable = (data, $form) ->
               <td>#{val[3]}</td>
             </tr>"
   $('.credit-table')
-    .toggleClass 'hidden'
+    .toggle()
+    .slideDown 700
     .find('table tbody').html html
-  $form.toggleClass 'hidden'
+  $form
+    .slideUp 500
+
 
