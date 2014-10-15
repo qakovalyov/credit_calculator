@@ -9,7 +9,7 @@ configure do
 end
 
 not_found do
-  'Your page cannot be found'
+  "Your page cannot be found. Don't worry:) just go to <a href='/'>Home</a>"
 end
 
 

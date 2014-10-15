@@ -20,7 +20,7 @@
                                         <label class='control-label'>Total Amount :</label>
                                         <div class='input-group'>
                                             <div class='input-group-addon'><i class='fa fa-usd'></i></div>
-                                            <input type='text' name='total_amount' id='total_amount' class='form-control input-sm'/>
+                                            <input type='text' name='total_amount' id='total_amount' class='form-control input-sm' autofocus/>
                                         </div>
                                         <span class='help-block'></span>
                                     </div>
@@ -31,6 +31,17 @@
                                             <input type='text' name='interest_rate' id='interest_rate' class='form-control input-sm'/>
                                         </div>
                                         <span class='help-block'></span>
+                                    </div>
+                                    <div class='form-group'>
+                                        <label>Credit Type: &nbsp;&nbsp;</label>
+                                        <label class='radio-inline control-label'>
+                                            <input type="radio" value='differential' name='type' id='type1' checked/>
+                                            differential
+                                        </label>
+                                        <label class='radio-inline control-label'>
+                                            <input type="radio" value='annuity' name='type' id='type2'/>
+                                            annuity
+                                        </label>
                                     </div>
                                     <div class='form-group'>
                                         <label class='control-label'>Term (in month):</label>
